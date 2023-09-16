@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Tanya Sherman" />
+		<meta name="email" content="sher0250@algonquincollegelive.com" />
+		<link rel="stylesheet" href="style.css" />
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kanit&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Cat Intake Form.</title>
+	</head>
+
+	<body>
+		<div class="grid">
+			<div class="catLogo">
+				<img src="./images/catlogo.jpg" alt="catlogo" />
+			</div>
+			<div class="header">
+				<h1>Fluffy Friends Cat Daycare</h1>
+			</div>
+			<div class="banner">
+				<a href="index.html" class="button">Home</a>
+			</div>
+
+			<!-- onsubmit="return validateForm()" -->
+			<form action="" method="GET" name="catForm">
+				<div class="formContainer">
+					<div class="left">
+						<h2>Cat Intake Form</h2>
+
+						<div class="nameAndAge">
+							<div class="name">
+								<label for="catName">Name of the Cat</label><br />
+								<input
+									type="text"
+									id="catName"
+									size="30"
+									placeholder="Mr. Whiskers"
+									name="catName"
+									tabindex="1"
+								/>
+								<div class="alert" id="catNameError"></div>
+							</div>
+
+							<div class="age">
+								<label for="catAge">Cat's Age</label><br />
+								<input
+									type="number"
+									id="catAge"
+									name="catAge"
+									value="0"
+									size="2"
+									min="0"
+									tabindex="2"
+								/><br />
+								<div class="alert" id="catAgeError"></div>
+								<br />
+							</div>
+						</div>
+
+						<h3>Days Needed</h3>
+						<div id="weekDays">
+							<div class="mon">
+								<label for="mon">Mon.</label><br />
+								<input type="checkbox" id="mon" value="Mon" tabindex="3" />
+							</div>
+							<div class="tue">
+								<label for="tue">Tue.</label><br />
+								<input type="checkbox" id="tue" value="Tue" tabindex="4" />
+							</div>
+							<div class="wed">
+								<label for="wed">Wed.</label><br />
+								<input type="checkbox" id="wed" value="Wed" tabindex="5" />
+							</div>
+							<div class="thu">
+								<label for="thu">Thu.</label><br />
+								<input type="checkbox" id="thu" value="Thu" tabindex="6" />
+							</div>
+							<div class="fri">
+								<label for="fri">Fri.</label>
+								<input type="checkbox" id="fri" value="Fri" tabindex="7" />
+							</div>
+							<div class="sat">
+								<label for="sat">Sat.</label>
+								<input type="checkbox" id="sat" value="Sat" tabindex="8" />
+							</div>
+							<div class="sun">
+								<label for="sun">Sun.</label>
+								<input type="checkbox" id="sun" value="Sun" tabindex="9" />
+							</div>
+						</div>
+						<!-- weekDays-->
+						<div class="alert" id="weekDaysError"></div>
+
+						<div class="time-row">
+							<div class="arriveT">
+								<label for="arrive">Drop-in Time</label><br />
+								<select id="arrive" tabindex="10">
+									<option value="9:30 AM">9:30 AM</option>
+								</select>
+							</div>
+
+							<div class="leaveT">
+								<label for="leave">Pick-up Time</label><br />
+								<select id="leave" tabindex="11">
+									<option value="4:30 PM">4:30 PM</option>
+								</select>
+							</div>
+						</div>
+						<div class="alert" id="timeError"></div>
+
+						<div class="spayed">
+							<input type="checkbox" id="SpNeu" value="SpNeu" tabindex="12" />
+							<label for="SpNeu">Cat Spayed/Neutered</label>
+						</div>
+						<div class="diet">
+							<input type="checkbox" id="diet" value="diet" tabindex="13" />
+							<label for="diet">Special Diet</label>
+						</div>
+						<div id="diet-descr">
+							<label for="dDescription">Describe Diet</label><br />
+							<input
+								type="text"
+								id="dDescription"
+								placeholder="Mr. Whiskers eats only live mice."
+								tabindex="14"
+							/>
+							<div class="alert" id="dDescriptionError"></div>
+						</div>
+
+						<div class="ownersInfo">
+							<div class="one">
+								<label for="ownersName">Owner's Name</label><br />
+								<input type="text" id="ownersName" placeholder="Cat Owner" tabindex="20" />
+								<div class="alert" id="ownersNameError"></div>
+								<br />
+							</div>
+							<div class="two">
+								<label for="daytime-phone">Daytime Phone:</label>
+								<input
+									type="tel"
+									id="daytime-phone"
+									name="daytime-phone"
+									placeholder="(123) 456-7980"
+									tabindex="21"
+								/>
+								<!-- pattern="[0-9]{10}" -->
+								<div class="alert" id="daytime-phoneError"></div>
+								<br />
+							</div>
+							<div class="three">
+								<label for="cell-phone">Cell Phone:</label>
+								<input
+									type="tel"
+									id="cell-phone"
+									name="cell-phone"
+									placeholder="(123) 456-7980"
+									tabindex="22"
+								/>
+								<!-- pattern="[0-9]{10}" -->
+								<div class="alert" id="cell-phoneError"></div>
+								<br />
+							</div>
+							<div class="four">
+								<label for="email">Email</label><br />
+								<input
+									type="email"
+									id="email"
+									placeholder="catowner@fluffy.com"
+									pattern="[\w\d]{1,}@[\w]{1,}.[\w]{1,}"
+									tabindex="23"
+								/>
+								<div class="alert" id="emailError"></div>
+								<br />
+							</div>
+						</div>
+
+						<input id="submit" type="submit" value="Submit" tabindex="26" />
+					</div>
+					<!-- end left column -->
+
+					<div rightColumn>
+						<div class="temperament">
+							<p>Temperament of Cat</p>
+							<div class="friendly">
+								<input
+									type="radio"
+									id="friendly"
+									name="temper"
+									value="friendly"
+									checked
+									tabindex="15"
+								/>
+								<label for="friendly">Friendly</label>
+							</div>
+							<div class="sleepy">
+								<input type="radio" id="sleepy" name="temper" value="sleepy" tabindex="16" />
+								<label for="sleepy">Sleepy</label>
+							</div>
+							<div class="independent">
+								<input
+									type="radio"
+									id="independent"
+									name="temper"
+									value="independent"
+									tabindex="17"
+								/>
+								<label for="independent">Independent</label>
+							</div>
+							<div class="territorial">
+								<input
+									type="radio"
+									id="territorial"
+									name="temper"
+									value="territorial"
+									tabindex="18"
+								/>
+								<label for="territorial">Territorial</label>
+							</div>
+							<div id="territorialDescr">
+								<label for="tempDescr">Describe Territorial</label><br />
+								<input type="text" id="tempDescr" placeholder="description" tabindex="19" />
+								<div class="alert" id="tempDescrError"></div>
+							</div>
+						</div>
+
+						<div class="emergencyContact">
+							<div class="emName">
+								<label for="emContName">Emergency Contact Name</label><br />
+								<input type="text" id="emContName" placeholder="Cat Friend" tabindex="24" />
+								<div class="alert" id="emContNameError"></div>
+							</div>
+							<div class="emPhone">
+								<label for="emContPhone">Contact Phone</label><br />
+								<input type="tel" id="emContPhone" placeholder="(123) 456-7980" tabindex="25" />
+								<!-- pattern="[0-9]{10}" -->
+								<div class="alert" id="emContPhoneError"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end of form container -->
+			</form>
+
+			<div class="image"></div>
+			<div class="footer">
+				<div class="logos">
+					<img src="images/PetDiversityPlusLogo.png" alt="" />
+					<img src="images/BBBcertified.png" alt="" />
+				</div>
+				<div class="address">
+					<p>
+						123 Fluffy Street<br />
+						Ottawa, Ontario<br />
+						(613) 123-CATS<br />
+						<a href="mailto:fluffyfriends@catdaycare.ca?subject=Cat%20day%20care%20enquiry"
+							>fluffyfriends@catdaycare.ca</a
+						>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>

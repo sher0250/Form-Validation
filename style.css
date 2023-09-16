@@ -1,0 +1,230 @@
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+}
+.grid {
+   display: grid;
+   overflow: auto;
+   grid-template-rows: 130px 40px 4fr 120px;
+   grid-template-columns: 0.4fr 1fr  .6fr;
+   grid-template-areas: 
+      "catLogo title title"
+      "banner banner banner"
+      "form1 form1 catImage"
+      "footer footer footer";
+}
+.catLogo {
+   grid-area: catLogo;
+   margin: 20px 0px 20px 40px;
+}
+.catLogo img {
+   height: 90px;
+}
+.header {
+   grid-area: title;
+}
+.header h1 {
+   font-family: 'Dancing Script', cursive;
+   font-family: 'Kanit', sans-serif;
+   font-size: 38pt;
+   color: #133854;
+   text-align: center;
+   margin-right: 40px;
+   line-height: 35pt;
+}
+.banner {
+   grid-area: banner;
+   background: #133854;
+   display: flex;
+}
+.button {
+   color: white;
+   padding: 10px;
+   text-decoration: none;
+   margin-left: 40px;
+   font-size: 18pt;
+}
+form {
+   grid-area: form1;
+   background-color: aqua;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: "one two";
+}
+.formContainer {
+   /* height: 400px; */
+   grid-column: 1/span 2;
+   gap: 13px;
+   overflow: scroll;
+   padding-left: 20px;
+   background: rgb(195, 194, 194);
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+            "left right";      
+}
+.left {
+   grid-area: left;
+}
+.nameAndAge{
+   display: flex;
+   margin-right: 20px;
+   gap: 10px;
+}
+.name input {
+   
+}
+.age{
+   width: 50px;
+   margin-right: 10px;
+}
+.age input {
+   width: 60px;
+   text-align: right;
+}
+
+h2 {
+   grid-area: title2;
+}
+h3 {
+   margin: 0;
+}
+
+#weekDays{
+   display: flex;
+   flex-flow: row;
+}
+
+.mon, .tue, .wed, .thu, .fri, .sat, .sun{
+   width: 25px;
+   display: inline-block;
+}
+label{
+   font-size: 11px;
+   text-align: center;
+   align-self: center;
+}
+input{
+   height: 20px;
+   justify-self: center;
+   border: none;
+   border-radius: 3px;
+}
+
+.time-row {
+   display: flex;
+   /* background: red; */
+}
+.arriveT {
+   margin-right: 10px;
+   margin-bottom: 10px;
+}
+.spayed {
+   /* background: red; */
+   display: flex;
+}
+.diet {
+   /* background: #51ff00; */
+   display: flex;
+}
+
+#dDescription{
+   width: 98%;
+   /* margin-bottom: 20px; */
+}
+.one, .two, .three, .four {
+   /* margin-top: 5px; */
+}
+
+.rightColumn{
+   /* grid-area: two; */
+}
+
+.temperament {
+   /* background-color: aqua; */
+   height: fit-content;
+}
+.temperament p {
+   margin: 10px 0px 5px 0px;
+}
+.friendly, .sleepy, .independent, .territorial {
+   display: flex;
+}
+#territorialDescr{
+   /* display: grid; */
+   justify-content: left;
+   margin: 5px 0px 0px 10px;
+}
+#territorialDescr label{
+   text-align: left;
+   margin-bottom: 3px;
+}
+/*
+#tempDescrError{
+   margin-left: 10px;
+}
+*/
+.emergencyContact{
+   margin: 20px 0px 0px 10px;
+   /* background-color: blue; */
+   align-self:self-start;
+}
+.emPhone {
+   margin-top: 10px;
+}
+
+.ownersInfo input{
+   width: 98%;
+}
+#submit {
+   background-color: #133854;
+   color: white;
+   font-weight: bold;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   width: 80px;
+   height: 30px;
+}
+
+
+
+
+
+
+.image {
+   grid-area: catImage;
+   background-image: url(images/pexels-matteo-petralli-1828875.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.footer {
+   grid-area: footer;
+   background: #133854;
+   padding: 8px;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+}
+.logos {
+   display: flex;
+   align-self: center;
+   justify-self: start;
+   margin-left: 20px;
+}
+.logos img {
+   height: 30px;
+   margin-right: 10px;
+}
+.address {
+   color: white;
+   text-align: right;
+   margin-right: 20px;
+}
+.address a {
+   text-decoration: none;
+}
+
+.alert{
+   color: red;
+}
